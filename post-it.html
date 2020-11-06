@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        newNote = () => {
+            let textValue = document.getElementById("userInput").value;
+            document.getElementById("userInput").innerHTML = "";
+            document.getElementById("bulletinBoard").innerHTML += `<div class="note">${textValue}</div>`;
+            console.log('Here');
+        }
+    </script>
+</head>
+<body>
+   <div class="mainBody" id="mainBody">
+       <div class="userInputArea" id="userInputArea">
+           <input class="userInput" id="userInput" value="Enter Note Here"></input>
+           <button onclick="newNote()">New Note</button>
+       </div>
+       <div class="bulletinBoard" id="bulletinBoard"></div>
+   </div>
+</body>
+</html>
